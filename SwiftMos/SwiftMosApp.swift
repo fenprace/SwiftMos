@@ -6,12 +6,20 @@
 //
 
 import SwiftUI
+import Foundation
+import Cocoa
 
 @main
 struct SwiftMosApp: App {
+    @NSApplicationDelegateAdaptor(AppDelegate.self) var appDelegate
+    
     var body: some Scene {
         WindowGroup {
             ContentView()
+        }
+        
+        Settings {
+            SettingsView()
         }
     }
 }

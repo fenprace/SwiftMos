@@ -14,6 +14,21 @@
 		193107B52858F7A2004AFB09 /* SwiftMosTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 193107B42858F7A2004AFB09 /* SwiftMosTests.swift */; };
 		193107BF2858F7A2004AFB09 /* SwiftMosUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 193107BE2858F7A2004AFB09 /* SwiftMosUITests.swift */; };
 		193107C12858F7A2004AFB09 /* SwiftMosUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 193107C02858F7A2004AFB09 /* SwiftMosUITestsLaunchTests.swift */; };
+		193107CE2858F7BB004AFB09 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 193107CD2858F7BB004AFB09 /* AppDelegate.swift */; };
+		193107DD2858F84D004AFB09 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 193107DC2858F84D004AFB09 /* Utils.swift */; };
+		193107DF2858F8B3004AFB09 /* Options.swift in Sources */ = {isa = PBXBuildFile; fileRef = 193107DE2858F8B3004AFB09 /* Options.swift */; };
+		193107E12858F94E004AFB09 /* ScrollCore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 193107E02858F94E004AFB09 /* ScrollCore.swift */; };
+		193107E32858FEE4004AFB09 /* Interceptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 193107E22858FEE4004AFB09 /* Interceptor.swift */; };
+		193107E52858FFBE004AFB09 /* ScrollPoster.swift in Sources */ = {isa = PBXBuildFile; fileRef = 193107E42858FFBE004AFB09 /* ScrollPoster.swift */; };
+		193107E928590312004AFB09 /* ScrollFiller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 193107E828590312004AFB09 /* ScrollFiller.swift */; };
+		193107EB2859034F004AFB09 /* ScrollPhase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 193107EA2859034F004AFB09 /* ScrollPhase.swift */; };
+		193107ED2859036C004AFB09 /* Interpolator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 193107EC2859036C004AFB09 /* Interpolator.swift */; };
+		193107EF2859049F004AFB09 /* ScrollEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 193107EE2859049F004AFB09 /* ScrollEvent.swift */; };
+		193107F128590618004AFB09 /* ScrollUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 193107F028590618004AFB09 /* ScrollUtils.swift */; };
+		193107F328590724004AFB09 /* ExceptionalApplication.swift in Sources */ = {isa = PBXBuildFile; fileRef = 193107F228590724004AFB09 /* ExceptionalApplication.swift */; };
+		193107F5285A1E85004AFB09 /* Preferences.swift in Sources */ = {isa = PBXBuildFile; fileRef = 193107F4285A1E85004AFB09 /* Preferences.swift */; };
+		193107F8285A22AF004AFB09 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 193107F7285A22AF004AFB09 /* SettingsView.swift */; };
+		193107FA285A2554004AFB09 /* SettingsGeneralView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 193107F9285A2554004AFB09 /* SettingsGeneralView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +60,21 @@
 		193107BA2858F7A2004AFB09 /* SwiftMosUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftMosUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		193107BE2858F7A2004AFB09 /* SwiftMosUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftMosUITests.swift; sourceTree = "<group>"; };
 		193107C02858F7A2004AFB09 /* SwiftMosUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftMosUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		193107CD2858F7BB004AFB09 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		193107DC2858F84D004AFB09 /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
+		193107DE2858F8B3004AFB09 /* Options.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Options.swift; sourceTree = "<group>"; };
+		193107E02858F94E004AFB09 /* ScrollCore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollCore.swift; sourceTree = "<group>"; };
+		193107E22858FEE4004AFB09 /* Interceptor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Interceptor.swift; sourceTree = "<group>"; };
+		193107E42858FFBE004AFB09 /* ScrollPoster.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollPoster.swift; sourceTree = "<group>"; };
+		193107E828590312004AFB09 /* ScrollFiller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollFiller.swift; sourceTree = "<group>"; };
+		193107EA2859034F004AFB09 /* ScrollPhase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollPhase.swift; sourceTree = "<group>"; };
+		193107EC2859036C004AFB09 /* Interpolator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Interpolator.swift; sourceTree = "<group>"; };
+		193107EE2859049F004AFB09 /* ScrollEvent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollEvent.swift; sourceTree = "<group>"; };
+		193107F028590618004AFB09 /* ScrollUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollUtils.swift; sourceTree = "<group>"; };
+		193107F228590724004AFB09 /* ExceptionalApplication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExceptionalApplication.swift; sourceTree = "<group>"; };
+		193107F4285A1E85004AFB09 /* Preferences.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Preferences.swift; sourceTree = "<group>"; };
+		193107F7285A22AF004AFB09 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		193107F9285A2554004AFB09 /* SettingsGeneralView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsGeneralView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,11 +125,14 @@
 		193107A12858F7A1004AFB09 /* SwiftMos */ = {
 			isa = PBXGroup;
 			children = (
+				193107FB285A2849004AFB09 /* Models */,
+				193107F6285A229E004AFB09 /* Views */,
+				193107CF2858F829004AFB09 /* Core */,
 				193107A22858F7A1004AFB09 /* SwiftMosApp.swift */,
-				193107A42858F7A1004AFB09 /* ContentView.swift */,
 				193107A62858F7A2004AFB09 /* Assets.xcassets */,
 				193107AB2858F7A2004AFB09 /* SwiftMos.entitlements */,
 				193107A82858F7A2004AFB09 /* Preview Content */,
+				193107CD2858F7BB004AFB09 /* AppDelegate.swift */,
 			);
 			path = SwiftMos;
 			sourceTree = "<group>";
@@ -127,6 +160,42 @@
 				193107C02858F7A2004AFB09 /* SwiftMosUITestsLaunchTests.swift */,
 			);
 			path = SwiftMosUITests;
+			sourceTree = "<group>";
+		};
+		193107CF2858F829004AFB09 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				193107DC2858F84D004AFB09 /* Utils.swift */,
+				193107DE2858F8B3004AFB09 /* Options.swift */,
+				193107E02858F94E004AFB09 /* ScrollCore.swift */,
+				193107E22858FEE4004AFB09 /* Interceptor.swift */,
+				193107E42858FFBE004AFB09 /* ScrollPoster.swift */,
+				193107E828590312004AFB09 /* ScrollFiller.swift */,
+				193107EA2859034F004AFB09 /* ScrollPhase.swift */,
+				193107EC2859036C004AFB09 /* Interpolator.swift */,
+				193107EE2859049F004AFB09 /* ScrollEvent.swift */,
+				193107F028590618004AFB09 /* ScrollUtils.swift */,
+				193107F228590724004AFB09 /* ExceptionalApplication.swift */,
+			);
+			name = Core;
+			sourceTree = "<group>";
+		};
+		193107F6285A229E004AFB09 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				193107F7285A22AF004AFB09 /* SettingsView.swift */,
+				193107A42858F7A1004AFB09 /* ContentView.swift */,
+				193107F9285A2554004AFB09 /* SettingsGeneralView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		193107FB285A2849004AFB09 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				193107F4285A1E85004AFB09 /* Preferences.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -259,8 +328,23 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				193107DF2858F8B3004AFB09 /* Options.swift in Sources */,
+				193107F328590724004AFB09 /* ExceptionalApplication.swift in Sources */,
+				193107F5285A1E85004AFB09 /* Preferences.swift in Sources */,
+				193107EF2859049F004AFB09 /* ScrollEvent.swift in Sources */,
+				193107E52858FFBE004AFB09 /* ScrollPoster.swift in Sources */,
+				193107CE2858F7BB004AFB09 /* AppDelegate.swift in Sources */,
+				193107E928590312004AFB09 /* ScrollFiller.swift in Sources */,
+				193107F128590618004AFB09 /* ScrollUtils.swift in Sources */,
+				193107DD2858F84D004AFB09 /* Utils.swift in Sources */,
+				193107F8285A22AF004AFB09 /* SettingsView.swift in Sources */,
+				193107FA285A2554004AFB09 /* SettingsGeneralView.swift in Sources */,
+				193107E32858FEE4004AFB09 /* Interceptor.swift in Sources */,
+				193107ED2859036C004AFB09 /* Interpolator.swift in Sources */,
 				193107A52858F7A1004AFB09 /* ContentView.swift in Sources */,
 				193107A32858F7A1004AFB09 /* SwiftMosApp.swift in Sources */,
+				193107EB2859034F004AFB09 /* ScrollPhase.swift in Sources */,
+				193107E12858F94E004AFB09 /* ScrollCore.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
