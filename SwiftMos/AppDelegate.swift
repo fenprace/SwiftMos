@@ -9,6 +9,7 @@ import Foundation
 import Cocoa
 
 class AppDelegate: NSObject, NSApplicationDelegate {
+    var statusBarCtl: StatusBarController?
 
     // 运行前预处理
     func applicationWillFinishLaunching(_ notification: Notification) {
@@ -24,6 +25,8 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         
         // 读取用户设置
         Options.shared.readOptions()
+        
+        statusBarCtl = StatusBarController()
         
         // 监听用户切换, 在切换用户 session 时停止运行
         NSWorkspace.shared.notificationCenter.addObserver(

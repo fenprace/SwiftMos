@@ -28,7 +28,6 @@ class ScrollCore {
         // 不处理触控板
         // 无法区分黑苹果, 因为黑苹果的触控板驱动直接模拟鼠标输入
         if scrollEvent.isTrackpad() { return Unmanaged.passUnretained(event) }
-        print("Is not trackpad")
         
         // 切换目标窗时停止滚动
         if ScrollUtils.shared.isTargetChanged(event) {
@@ -51,14 +50,12 @@ class ScrollCore {
 //        var enableReverse = false
         
         var enableSmooth = Preferences.shared.enableSmooth && !ScrollCore.shared.blockSmooth
-        var enableReverse = Preferences.shared.enableReverse
+        var enableReverseX = Preferences.shared.enableReverseX
+        var enableReverseY = Preferences.shared.enableReverseY
         
-        print("!\(enableSmooth)")
-        print("!!\(enableReverse)")
-        
-        var step = Options.shared.scrollAdvanced.step
-        var speed = Options.shared.scrollAdvanced.speed
-        var duration = Options.shared.scrollAdvanced.durationTransition
+        var step = Preferences.shared.step
+        var speed = Preferences.shared.speed
+        var duration = Preferences.shared.duration
         
 //       if let exceptionalApplication = ScrollCore.shared.exceptionalApplication {
 //           enableSmooth = exceptionalApplication.isSmooth(ScrollCore.shared.blockSmooth)
@@ -79,7 +76,7 @@ class ScrollCore {
        // Y轴
        if scrollEvent.Y.valid {
            // 是否翻转滚动
-           if enableReverse {
+           if enableReverseY {
                ScrollEvent.reverseY(scrollEvent)
            }
            // 是否平滑滚动
@@ -96,7 +93,7 @@ class ScrollCore {
        // X轴
        if scrollEvent.X.valid {
            // 是否翻转滚动
-           if enableReverse {
+           if enableReverseX {
                ScrollEvent.reverseX(scrollEvent)
            }
            // 是否平滑滚动

@@ -29,6 +29,7 @@
 		193107F5285A1E85004AFB09 /* Preferences.swift in Sources */ = {isa = PBXBuildFile; fileRef = 193107F4285A1E85004AFB09 /* Preferences.swift */; };
 		193107F8285A22AF004AFB09 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 193107F7285A22AF004AFB09 /* SettingsView.swift */; };
 		193107FA285A2554004AFB09 /* SettingsGeneralView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 193107F9285A2554004AFB09 /* SettingsGeneralView.swift */; };
+		193107FD285A4A3F004AFB09 /* StatusBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 193107FC285A4A3F004AFB09 /* StatusBarController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -75,6 +76,7 @@
 		193107F4285A1E85004AFB09 /* Preferences.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Preferences.swift; sourceTree = "<group>"; };
 		193107F7285A22AF004AFB09 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		193107F9285A2554004AFB09 /* SettingsGeneralView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsGeneralView.swift; sourceTree = "<group>"; };
+		193107FC285A4A3F004AFB09 /* StatusBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusBarController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -125,14 +127,15 @@
 		193107A12858F7A1004AFB09 /* SwiftMos */ = {
 			isa = PBXGroup;
 			children = (
+				193107CF2858F829004AFB09 /* Core */,
 				193107FB285A2849004AFB09 /* Models */,
 				193107F6285A229E004AFB09 /* Views */,
-				193107CF2858F829004AFB09 /* Core */,
+				193107CD2858F7BB004AFB09 /* AppDelegate.swift */,
+				193107FC285A4A3F004AFB09 /* StatusBarController.swift */,
 				193107A22858F7A1004AFB09 /* SwiftMosApp.swift */,
 				193107A62858F7A2004AFB09 /* Assets.xcassets */,
 				193107AB2858F7A2004AFB09 /* SwiftMos.entitlements */,
 				193107A82858F7A2004AFB09 /* Preview Content */,
-				193107CD2858F7BB004AFB09 /* AppDelegate.swift */,
 			);
 			path = SwiftMos;
 			sourceTree = "<group>";
@@ -341,6 +344,7 @@
 				193107FA285A2554004AFB09 /* SettingsGeneralView.swift in Sources */,
 				193107E32858FEE4004AFB09 /* Interceptor.swift in Sources */,
 				193107ED2859036C004AFB09 /* Interpolator.swift in Sources */,
+				193107FD285A4A3F004AFB09 /* StatusBarController.swift in Sources */,
 				193107A52858F7A1004AFB09 /* ContentView.swift in Sources */,
 				193107A32858F7A1004AFB09 /* SwiftMosApp.swift in Sources */,
 				193107EB2859034F004AFB09 /* ScrollPhase.swift in Sources */,

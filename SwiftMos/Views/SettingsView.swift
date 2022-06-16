@@ -24,9 +24,10 @@ struct SettingsView: View {
             
             SettingsAdvancedView()
                 .tabItem {
-                    Label("Advanced", systemImage: "star")
+                    Label("Advanced", systemImage: "cpu")
                 }
                 .tag(Tabs.advanced)
+                .environmentObject(Preferences.shared)
         }
         .frame(width: 480, height: 360)
     }
