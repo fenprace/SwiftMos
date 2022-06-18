@@ -51,8 +51,7 @@ class ScrollCore {
         
         var step = Preferences.shared.step
         var speed = Preferences.shared.speed
-        var duration = Preferences.shared.duration
-        
+        var duration = Preferences.shared.durationTransition
         
        // Launchpad 激活则强制屏蔽平滑
        if ScrollUtils.shared.getLaunchpadActivity(withRunningApplication: targetRunningApplication) {
