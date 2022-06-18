@@ -1,0 +1,10 @@
+/* 
+  Localizable.strings
+  SwiftMos
+
+  Created by Zhuo FENG on 2022/6/18.
+  
+*/
+
+"c.preferences" = "Preferences";
+"c.quit" = "Quit";

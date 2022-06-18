@@ -24,13 +24,19 @@ class StatusBar {
         menu.addItem(NSMenuItem.separator())
         menu.addItem(menuItemQuit)
 
-        menuItemPreferences.title = "Preferences"
-        menuItemPreferences.image = NSImage(systemSymbolName: "gear", accessibilityDescription: "Preferences")
+        menuItemPreferences.title = NSLocalizedString("c.preferences", comment: "preferences")
+        menuItemPreferences.image = NSImage(
+            systemSymbolName: "gear",
+            accessibilityDescription: menuItemPreferences.title
+        )
         menuItemPreferences.target = self
         menuItemPreferences.action = #selector(StatusBar.showPreferences)
         
-        menuItemQuit.title = "Quit"
-        menuItemQuit.image = NSImage(systemSymbolName: "escape", accessibilityDescription: "Quit")
+        menuItemQuit.title = NSLocalizedString("c.quit", comment: "quit")
+        menuItemQuit.image = NSImage(
+            systemSymbolName: "escape",
+            accessibilityDescription: menuItemQuit.title
+        )
         menuItemQuit.target = self
         menuItemQuit.action = #selector(StatusBar.quit)
     }

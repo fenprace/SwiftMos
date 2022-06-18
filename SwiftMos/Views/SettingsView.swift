@@ -17,14 +17,14 @@ struct SettingsView: View {
         TabView {
             SettingsGeneralView()
                 .tabItem {
-                    Label("General", systemImage: "gear")
+                    Label("c.general", systemImage: "gear")
                 }
                 .tag(Tabs.general)
                 .environmentObject(Preferences.shared)
             
             SettingsAdvancedView()
                 .tabItem {
-                    Label("Advanced", systemImage: "cpu")
+                    Label("c.advanced", systemImage: "cpu")
                 }
                 .tag(Tabs.advanced)
                 .environmentObject(Preferences.shared)

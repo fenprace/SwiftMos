@@ -1,0 +1,33 @@
+/* 
+  Localizable.strings
+  SwiftMos
+
+  Created by Zhuo FENG on 2022/6/18.
+  
+*/
+
+"c.preferences" = "偏好设置";
+"c.quit" = "退出";
+
+"c.general" = "基础";
+"c.advanced" = "高级";
+
+"c.scroll:" = "滚动：";
+
+"c.enableScroll" = "平滑滚动";
+"c.enableScroll.desc" = "让鼠标的滚动效果更佳平滑";
+
+"c.enableReverseX" = "翻转 X 轴滚动";
+"c.enableReverseX.desc" = "单独翻转鼠标滚轮在 X 轴的滚动方向";
+
+"c.enableReverseY" = "翻转 Y 轴滚动";
+"c.enableReverseY.desc" = "单独翻转鼠标滚轮在 Y 轴的滚动方向";
+
+"c.step:" = "最短步长：";
+"c.step.desc" = "控制单次滚动的最短距离";
+"c.speed:" = "速度增益：";
+"c.speed.desc" = "控制持续滚动的跟踪速度增益";
+"c.duration:" = "持续时间：";
+"c.duration.desc" = "控制滚动的缓动持续时间";
+
+"c.reset" = "恢复为默认值";

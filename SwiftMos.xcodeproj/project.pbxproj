@@ -28,6 +28,7 @@
 		193107FA285A2554004AFB09 /* SettingsGeneralView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 193107F9285A2554004AFB09 /* SettingsGeneralView.swift */; };
 		193107FD285A4A3F004AFB09 /* StatusBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 193107FC285A4A3F004AFB09 /* StatusBar.swift */; };
 		1956BA42285D72E30075A60E /* RunningApplication.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1956BA41285D72E30075A60E /* RunningApplication.swift */; };
+		1956BA45285D7A6A0075A60E /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1956BA47285D7A6A0075A60E /* Localizable.strings */; };
 		19984239285CCA4400FAB6C9 /* SettingsAdvancedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19984238285CCA4400FAB6C9 /* SettingsAdvancedView.swift */; };
 /* End PBXBuildFile section */
 
@@ -74,6 +75,8 @@
 		193107F9285A2554004AFB09 /* SettingsGeneralView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsGeneralView.swift; sourceTree = "<group>"; };
 		193107FC285A4A3F004AFB09 /* StatusBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusBar.swift; sourceTree = "<group>"; };
 		1956BA41285D72E30075A60E /* RunningApplication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RunningApplication.swift; sourceTree = "<group>"; };
+		1956BA46285D7A6A0075A60E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		1956BA48285D7A8A0075A60E /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		19984238285CCA4400FAB6C9 /* SettingsAdvancedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsAdvancedView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -134,6 +137,7 @@
 				193107A62858F7A2004AFB09 /* Assets.xcassets */,
 				193107AB2858F7A2004AFB09 /* SwiftMos.entitlements */,
 				193107A82858F7A2004AFB09 /* Preview Content */,
+				1956BA47285D7A6A0075A60E /* Localizable.strings */,
 			);
 			path = SwiftMos;
 			sourceTree = "<group>";
@@ -292,6 +296,7 @@
 			knownRegions = (
 				en,
 				Base,
+				"zh-Hans",
 			);
 			mainGroup = 193107962858F7A1004AFB09;
 			productRefGroup = 193107A02858F7A1004AFB09 /* Products */;
@@ -311,6 +316,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				193107AA2858F7A2004AFB09 /* Preview Assets.xcassets in Resources */,
+				1956BA45285D7A6A0075A60E /* Localizable.strings in Resources */,
 				193107A72858F7A2004AFB09 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -388,11 +394,24 @@
 		};
 /* End PBXTargetDependency section */
 
+/* Begin PBXVariantGroup section */
+		1956BA47285D7A6A0075A60E /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1956BA46285D7A6A0075A60E /* en */,
+				1956BA48285D7A8A0075A60E /* zh-Hans */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
 /* Begin XCBuildConfiguration section */
 		193107C22858F7A2004AFB09 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
@@ -453,6 +472,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";

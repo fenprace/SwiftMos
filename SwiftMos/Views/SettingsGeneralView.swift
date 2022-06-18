@@ -11,10 +11,22 @@ struct SettingsGeneralView: View {
     @EnvironmentObject var pref: Preferences
     
     var body: some View {
-        Form {
-            Toggle("Enable Smooth", isOn: $pref.enableSmooth)
-            Toggle("Enable Reverse X", isOn: $pref.enableReverseX)
-            Toggle("Enable Reverse Y", isOn: $pref.enableReverseY)
+        HStack(alignment: .firstTextBaseline) {
+            Text("c.scroll:")
+            
+            Form {
+                Toggle("c.enableScroll", isOn: $pref.enableSmooth).foregroundColor(.primary)
+                Text("c.enableScroll.desc")
+                    .foregroundColor(.secondary).font(.system(size: 12))
+                
+                Toggle("c.enableReverseX", isOn: $pref.enableReverseX)
+                Text("c.enableReverseX.desc")
+                    .foregroundColor(.secondary).font(.system(size: 12))
+                
+                Toggle("c.enableReverseY", isOn: $pref.enableReverseY)
+                Text("c.enableReverseY.desc")
+                    .foregroundColor(.secondary).font(.system(size: 12))
+            }
         }
         .padding()
     }
