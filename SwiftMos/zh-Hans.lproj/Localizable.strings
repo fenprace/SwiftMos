@@ -11,6 +11,7 @@
 
 "c.general" = "基础";
 "c.advanced" = "高级";
+"c.about" = "关于";
 
 "c.scroll:" = "滚动：";
 
@@ -31,3 +32,6 @@
 "c.duration.desc" = "控制滚动的缓动持续时间";
 
 "c.reset" = "恢复为默认值";
+
+"c.slogan" = "SwiftMos 是 [Mos](http://mos.caldis.me/) 的复制品";
+"c.description" = "在 MacOS 上平滑鼠标滚动效果、单独设置滚动方向，让你的滚轮爽如触控板";

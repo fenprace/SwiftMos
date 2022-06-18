@@ -11,6 +11,7 @@ struct SettingsView: View {
     private enum Tabs: Hashable {
         case general
         case advanced
+        case about
     }
     
     var body: some View {
@@ -28,6 +29,12 @@ struct SettingsView: View {
                 }
                 .tag(Tabs.advanced)
                 .environmentObject(Preferences.shared)
+            
+            SettingsAboutView()
+                .tabItem {
+                    Label("c.about", systemImage: "person.crop.square")
+                }
+                .tag(Tabs.about)
         }
         .frame(width: 480)
     }

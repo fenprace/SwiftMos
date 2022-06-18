@@ -29,6 +29,7 @@
 		193107FD285A4A3F004AFB09 /* StatusBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 193107FC285A4A3F004AFB09 /* StatusBar.swift */; };
 		1956BA42285D72E30075A60E /* RunningApplication.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1956BA41285D72E30075A60E /* RunningApplication.swift */; };
 		1956BA45285D7A6A0075A60E /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1956BA47285D7A6A0075A60E /* Localizable.strings */; };
+		1956BA4A285D8E610075A60E /* SettingsAboutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1956BA49285D8E610075A60E /* SettingsAboutView.swift */; };
 		19984239285CCA4400FAB6C9 /* SettingsAdvancedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19984238285CCA4400FAB6C9 /* SettingsAdvancedView.swift */; };
 /* End PBXBuildFile section */
 
@@ -77,6 +78,7 @@
 		1956BA41285D72E30075A60E /* RunningApplication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RunningApplication.swift; sourceTree = "<group>"; };
 		1956BA46285D7A6A0075A60E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		1956BA48285D7A8A0075A60E /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		1956BA49285D8E610075A60E /* SettingsAboutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsAboutView.swift; sourceTree = "<group>"; };
 		19984238285CCA4400FAB6C9 /* SettingsAdvancedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsAdvancedView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -188,6 +190,7 @@
 				193107F7285A22AF004AFB09 /* SettingsView.swift */,
 				193107F9285A2554004AFB09 /* SettingsGeneralView.swift */,
 				19984238285CCA4400FAB6C9 /* SettingsAdvancedView.swift */,
+				1956BA49285D8E610075A60E /* SettingsAboutView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -351,6 +354,7 @@
 				193107DD2858F84D004AFB09 /* Utils.swift in Sources */,
 				193107F8285A22AF004AFB09 /* SettingsView.swift in Sources */,
 				193107FA285A2554004AFB09 /* SettingsGeneralView.swift in Sources */,
+				1956BA4A285D8E610075A60E /* SettingsAboutView.swift in Sources */,
 				193107E32858FEE4004AFB09 /* Interceptor.swift in Sources */,
 				193107ED2859036C004AFB09 /* Interpolator.swift in Sources */,
 				193107FD285A4A3F004AFB09 /* StatusBar.swift in Sources */,

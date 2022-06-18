@@ -69,7 +69,7 @@ struct SettingsAdvancedView: View {
             Button("c.reset") {
                 Preferences.shared.resetAdvanced()
             }
-        }.padding(20)
+        }.padding()
     }
 }
 
