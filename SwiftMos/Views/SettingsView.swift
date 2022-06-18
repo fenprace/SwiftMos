@@ -29,7 +29,7 @@ struct SettingsView: View {
                 .tag(Tabs.advanced)
                 .environmentObject(Preferences.shared)
         }
-        .frame(width: 480, height: 360)
+        .frame(width: 480)
     }
 }
 

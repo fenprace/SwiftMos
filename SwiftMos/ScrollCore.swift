@@ -34,8 +34,10 @@ class ScrollCore {
             ScrollPoster.shared.pauseAuto()
             return nil
         }
+        
         // 滚动阶段
         ScrollPhase.shared.syncPhase()
+        
         // 是否返回原始事件 (不启用平滑时)
         var returnOriginalEvent = true
         // 当鼠标输入, 根据需要执行翻转方向/平滑滚动
@@ -46,9 +48,6 @@ class ScrollCore {
         // ScrollCore.shared.exceptionalApplication = ScrollUtils.shared.getExceptionalApplication(from: targetRunningApplication)
         
        // 平滑/翻转
-//        var enableSmooth = false
-//        var enableReverse = false
-        
         var enableSmooth = Preferences.shared.enableSmooth && !ScrollCore.shared.blockSmooth
         var enableReverseX = Preferences.shared.enableReverseX
         var enableReverseY = Preferences.shared.enableReverseY
@@ -148,8 +147,6 @@ class ScrollCore {
     }
     
     func endHandlingScroll() {
-        print("STOP handling scroll")
-        
         // Guard
         if !isActive { return }
         isActive = false

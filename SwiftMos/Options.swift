@@ -14,11 +14,6 @@ class OPTIONS_GENERAL_DEFAULT {
     var whitelist = false
 }
 
-class OPTIONS_SCROLL_BASIC_DEFAULT: Codable {
-    var smooth = true
-    var reverse = true
-}
-
 class OPTIONS_SCROLL_ADVANCED_DEFAULT: Codable {
     var dash:Int? = 0 {
         didSet { Options.shared.saveOptions() }
@@ -76,16 +71,10 @@ class Options {
     static let shared = Options()
     
     var general = OPTIONS_GENERAL_DEFAULT()
-    var scrollBasic = OPTIONS_SCROLL_BASIC_DEFAULT()
     var scrollAdvanced = OPTIONS_SCROLL_ADVANCED_DEFAULT() {
         didSet { Options.shared.saveOptions() }
     }
     
-    func readOptions() {
-        print("Reading Options")
-    }
     
-    func saveOptions() {
-        
-    }
+    func saveOptions() {}
 }

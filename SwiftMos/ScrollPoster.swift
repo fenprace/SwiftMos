@@ -25,7 +25,7 @@ class ScrollPoster {
     private var scrollBuffer = ( y: 0.0, x: 0.0 )  // 滚动缓冲距离
     // 滚动配置
     private var shifting = false
-    private var duration = Options.shared.scrollAdvanced.durationTransition
+    private var duration = Preferences.shared.durationTransition
     // 外部依赖
     var ref: (event: CGEvent?, proxy: CGEventTapProxy?) = (event: nil, proxy: nil)
 }
@@ -156,8 +156,8 @@ private extension ScrollPoster {
         }
         // 如果临近目标距离小于精确度门限则暂停滚动
         if (
-            scrollPulse.y.magnitude <= Options.shared.scrollAdvanced.precision &&
-            scrollPulse.x.magnitude <= Options.shared.scrollAdvanced.precision
+            scrollPulse.y.magnitude <= Preferences.shared.precision &&
+            scrollPulse.x.magnitude <= Preferences.shared.precision
         ) {
              disableAuto()
         }

@@ -50,13 +50,28 @@ class Preferences: ObservableObject {
         }
         
         didSet {
-            print(duration)
             UserDefaults.standard.set(duration, forKey: "duration")
         }
     }
     
-
-
+    @Published var applications: [ExceptionalApplication] = [] {
+        didSet {
+            let encoder = JSONEncoder()
+            
+            do {
+                let encoded = try encoder.encode(applications)
+                UserDefaults.standard.set(encoded, forKey: "applications")
+            } catch {
+                
+            }
+        }
+    }
+    
+    var precision = 1.00 {
+        didSet {
+            UserDefaults.standard.set(precision, forKey: "precision")
+        }
+    }
 
     init() {
         self.enableSmooth = UserDefaults.standard.bool(forKey: "enableSmooth")
@@ -65,6 +80,18 @@ class Preferences: ObservableObject {
         self.step = UserDefaults.standard.double(forKey: "step")
         self.speed = UserDefaults.standard.double(forKey: "speed")
         self.duration = UserDefaults.standard.double(forKey: "duration")
+        self.precision = UserDefaults.standard.double(forKey: "precision")
+        
+        if let data = UserDefaults.standard.data(forKey: "applications") {
+            let decoder = JSONDecoder()
+            
+            do {
+                self.applications = try decoder.decode([ExceptionalApplication].self, from: data)
+            } catch {
+                print("Unable to Decode Notes (\(error))")
+            }
+        }
+        
     }
     
     static func generateDurationTransition(with duration: Double) -> Double {
@@ -74,5 +101,11 @@ class Preferences: ObservableObject {
         let val = 1 - (duration / upperLimit).squareRoot()
         // 三位小数
         return Double(round(1000 * val) / 1000)
+    }
+    
+    func resetAdvanced() {
+        self.step = 35.0
+        self.speed = 3.0
+        self.duration = 3.9
     }
 }

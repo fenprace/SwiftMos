@@ -23,9 +23,6 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         // 禁止重复运行
         Utils.preventMultiRunning(killExist: true)
         
-        // 读取用户设置
-        Options.shared.readOptions()
-        
         statusBarCtl = StatusBarController()
         
         // 监听用户切换, 在切换用户 session 时停止运行

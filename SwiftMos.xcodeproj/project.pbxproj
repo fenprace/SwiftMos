@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		193107A32858F7A1004AFB09 /* SwiftMosApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 193107A22858F7A1004AFB09 /* SwiftMosApp.swift */; };
-		193107A52858F7A1004AFB09 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 193107A42858F7A1004AFB09 /* ContentView.swift */; };
 		193107A72858F7A2004AFB09 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 193107A62858F7A2004AFB09 /* Assets.xcassets */; };
 		193107AA2858F7A2004AFB09 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 193107A92858F7A2004AFB09 /* Preview Assets.xcassets */; };
 		193107B52858F7A2004AFB09 /* SwiftMosTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 193107B42858F7A2004AFB09 /* SwiftMosTests.swift */; };
@@ -30,6 +29,8 @@
 		193107F8285A22AF004AFB09 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 193107F7285A22AF004AFB09 /* SettingsView.swift */; };
 		193107FA285A2554004AFB09 /* SettingsGeneralView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 193107F9285A2554004AFB09 /* SettingsGeneralView.swift */; };
 		193107FD285A4A3F004AFB09 /* StatusBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 193107FC285A4A3F004AFB09 /* StatusBarController.swift */; };
+		19984239285CCA4400FAB6C9 /* SettingsAdvancedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19984238285CCA4400FAB6C9 /* SettingsAdvancedView.swift */; };
+		1998423B285CE2A500FAB6C9 /* SettingsExecptionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1998423A285CE2A500FAB6C9 /* SettingsExecptionView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,7 +53,6 @@
 /* Begin PBXFileReference section */
 		1931079F2858F7A1004AFB09 /* SwiftMos.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftMos.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		193107A22858F7A1004AFB09 /* SwiftMosApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftMosApp.swift; sourceTree = "<group>"; };
-		193107A42858F7A1004AFB09 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		193107A62858F7A2004AFB09 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		193107A92858F7A2004AFB09 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		193107AB2858F7A2004AFB09 /* SwiftMos.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SwiftMos.entitlements; sourceTree = "<group>"; };
@@ -77,6 +77,8 @@
 		193107F7285A22AF004AFB09 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		193107F9285A2554004AFB09 /* SettingsGeneralView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsGeneralView.swift; sourceTree = "<group>"; };
 		193107FC285A4A3F004AFB09 /* StatusBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusBarController.swift; sourceTree = "<group>"; };
+		19984238285CCA4400FAB6C9 /* SettingsAdvancedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsAdvancedView.swift; sourceTree = "<group>"; };
+		1998423A285CE2A500FAB6C9 /* SettingsExecptionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsExecptionView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -187,8 +189,9 @@
 			isa = PBXGroup;
 			children = (
 				193107F7285A22AF004AFB09 /* SettingsView.swift */,
-				193107A42858F7A1004AFB09 /* ContentView.swift */,
 				193107F9285A2554004AFB09 /* SettingsGeneralView.swift */,
+				19984238285CCA4400FAB6C9 /* SettingsAdvancedView.swift */,
+				1998423A285CE2A500FAB6C9 /* SettingsExecptionView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -333,6 +336,7 @@
 			files = (
 				193107DF2858F8B3004AFB09 /* Options.swift in Sources */,
 				193107F328590724004AFB09 /* ExceptionalApplication.swift in Sources */,
+				1998423B285CE2A500FAB6C9 /* SettingsExecptionView.swift in Sources */,
 				193107F5285A1E85004AFB09 /* Preferences.swift in Sources */,
 				193107EF2859049F004AFB09 /* ScrollEvent.swift in Sources */,
 				193107E52858FFBE004AFB09 /* ScrollPoster.swift in Sources */,
@@ -345,7 +349,7 @@
 				193107E32858FEE4004AFB09 /* Interceptor.swift in Sources */,
 				193107ED2859036C004AFB09 /* Interpolator.swift in Sources */,
 				193107FD285A4A3F004AFB09 /* StatusBarController.swift in Sources */,
-				193107A52858F7A1004AFB09 /* ContentView.swift in Sources */,
+				19984239285CCA4400FAB6C9 /* SettingsAdvancedView.swift in Sources */,
 				193107A32858F7A1004AFB09 /* SwiftMosApp.swift in Sources */,
 				193107EB2859034F004AFB09 /* ScrollPhase.swift in Sources */,
 				193107E12858F94E004AFB09 /* ScrollCore.swift in Sources */,
