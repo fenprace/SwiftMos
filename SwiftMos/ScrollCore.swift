@@ -44,9 +44,6 @@ class ScrollCore {
         // 获取事件目标
         let targetRunningApplication = ScrollUtils.shared.getRunningApplication(from: event)
         
-        // 获取列表中应用程序的列外设置信息
-        // ScrollCore.shared.exceptionalApplication = ScrollUtils.shared.getExceptionalApplication(from: targetRunningApplication)
-        
        // 平滑/翻转
         var enableSmooth = Preferences.shared.enableSmooth && !ScrollCore.shared.blockSmooth
         var enableReverseX = Preferences.shared.enableReverseX
@@ -56,16 +53,6 @@ class ScrollCore {
         var speed = Preferences.shared.speed
         var duration = Preferences.shared.duration
         
-//       if let exceptionalApplication = ScrollCore.shared.exceptionalApplication {
-//           enableSmooth = exceptionalApplication.isSmooth(ScrollCore.shared.blockSmooth)
-//           enableReverse = exceptionalApplication.isReverse()
-//           step = exceptionalApplication.getStep()
-//           speed = exceptionalApplication.getSpeed()
-//           duration = exceptionalApplication.getDuration()
-//       } else if !Options.shared.general.whitelist {
-//           enableSmooth = Options.shared.scrollBasic.smooth && !ScrollCore.shared.blockSmooth
-//           enableReverse = Options.shared.scrollBasic.reverse
-//       }
         
        // Launchpad 激活则强制屏蔽平滑
        if ScrollUtils.shared.getLaunchpadActivity(withRunningApplication: targetRunningApplication) {
@@ -126,9 +113,7 @@ class ScrollCore {
        }
     }
     
-    func startHandlingScroll() {
-        print("START handling scroll")
-        
+    func startHandlingScroll() {        
         // Guard
         if isActive { return }
         isActive = true

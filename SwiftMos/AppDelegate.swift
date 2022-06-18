@@ -9,7 +9,7 @@ import Foundation
 import Cocoa
 
 class AppDelegate: NSObject, NSApplicationDelegate {
-    var statusBarCtl: StatusBarController?
+    var statusBar: StatusBar?
 
     // 运行前预处理
     func applicationWillFinishLaunching(_ notification: Notification) {
@@ -23,7 +23,9 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         // 禁止重复运行
         Utils.preventMultiRunning(killExist: true)
         
-        statusBarCtl = StatusBarController()
+        Utils.hideFromDock()
+        
+        statusBar = StatusBar()
         
         // 监听用户切换, 在切换用户 session 时停止运行
         NSWorkspace.shared.notificationCenter.addObserver(
@@ -32,6 +34,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
             name: NSWorkspace.sessionDidBecomeActiveNotification,
             object: nil
         )
+        
         NSWorkspace.shared.notificationCenter.addObserver(
             self,
             selector: #selector(AppDelegate.sessionDidResign),
@@ -51,6 +54,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         }
         
         if Utils.isHadAccessibilityPermissions() {
+            statusBar?.showPreferences()
             // WindowManager.shared.showWindow(withIdentifier: WINDOW_IDENTIFIER.preferencesWindowController)
         }
         
@@ -79,7 +83,6 @@ class AppDelegate: NSObject, NSApplicationDelegate {
                 ScrollCore.shared.startHandlingScroll()
             } else {
                 // 如果应用不在辅助权限列表内, 则弹出欢迎窗口
-                
                 // WindowManager.shared.showWindow(withIdentifier: WINDOW_IDENTIFIER.introductionWindowController, withTitle: "")
                 
                 // 启动定时器检测权限, 当拥有授权时启动滚动处理
@@ -99,6 +102,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         ScrollCore.shared.startHandlingScroll()
         NSLog("ScrollCore Start: Session Active")
     }
+    
     @objc func sessionDidResign(notification: NSNotification){
         ScrollCore.shared.endHandlingScroll()
         NSLog("ScrollCore End: Session Resign")

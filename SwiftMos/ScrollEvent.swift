@@ -72,7 +72,7 @@ extension ScrollEvent {
         }
         // 根据输入事件源增强判断
         if result {
-            if let specialProcessID = Utils.getRunningApplicationProcessIdentifier(withBundleIdentifier: SPECIAL_EVENT_SOURCE_APPLICATION.logitechOptions)?.processIdentifier {
+            if let specialProcessID = RunningApplication.getProcessIdentifier(withBundleIdentifier: SPECIAL_EVENT_SOURCE_APPLICATION.logitechOptions)?.processIdentifier {
                 let sourceProcessID = event.getIntegerValueField(.eventSourceUnixProcessID)
                 if sourceProcessID == specialProcessID {
                     result = false
