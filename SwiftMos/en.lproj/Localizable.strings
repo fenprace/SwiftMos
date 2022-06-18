@@ -7,4 +7,31 @@
 */
 
 "c.preferences" = "Preferences";
-"c.quit" = "Quit";
+"c.quit" = "Exit";
+
+"c.general" = "General";
+"c.advanced" = "Advanced";
+"c.about" = "About";
+
+"c.scroll:" = "Scroll:";
+
+"c.enableScroll" = "Smooth Scrolling";
+"c.enableScroll.desc" = "Make scrolling with the mouse wheel butter-smooth";
+
+"c.enableReverseX" = "Reverse X-Axis Scroll";
+"c.enableReverseX.desc" = "Reverse the mouse wheel scroll direction on the X-axis";
+
+"c.enableReverseY" = "Reverse Y-Axis Scroll";
+"c.enableReverseY.desc" = "Reverse the mouse wheel scroll direction on the Y-axis";
+
+"c.step:" = "Step:";
+"c.step.desc" = "Sets the minimum scroll distance";
+"c.speed:" = "Speed:";
+"c.speed.desc" = "Sets scrolling acceleration";
+"c.duration:" = "Duration:";
+"c.duration.desc" = "Sets the duration of the scroll animation";
+
+"c.reset" = "Reset to defaults";
+
+"c.slogan" = "SwiftMos is a replication of [Mos](http://mos.caldis.me/)";
+"c.description" = "Smooth scrolling and set scroll direction independently for your mouse on macOS";
