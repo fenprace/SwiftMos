@@ -20,7 +20,7 @@ class ScrollCore {
     var blockSmooth = false
     
     var dashAmplification = 1.0
-
+    
     let scrollEventCallBack: CGEventTapCallBack = { (proxy, type, event, refcon) in
         // 滚动事件
         let scrollEvent = ScrollEvent(with: event)
@@ -38,13 +38,11 @@ class ScrollCore {
         // 滚动阶段
         ScrollPhase.shared.syncPhase()
         
-        // 是否返回原始事件 (不启用平滑时)
-        var returnOriginalEvent = true
         // 当鼠标输入, 根据需要执行翻转方向/平滑滚动
         // 获取事件目标
         let targetRunningApplication = ScrollUtils.shared.getRunningApplication(from: event)
         
-       // 平滑/翻转
+        // 平滑/翻转
         var enableSmooth = Preferences.shared.enableSmooth && !ScrollCore.shared.blockSmooth
         var enableReverseX = Preferences.shared.enableReverseX
         var enableReverseY = Preferences.shared.enableReverseY
@@ -53,66 +51,69 @@ class ScrollCore {
         var speed = Preferences.shared.speed
         var duration = Preferences.shared.durationTransition
         
-       // Launchpad 激活则强制屏蔽平滑
-       if ScrollUtils.shared.getLaunchpadActivity(withRunningApplication: targetRunningApplication) {
-           enableSmooth = false
-       }
+        // Launchpad 激活则强制屏蔽平滑
+        if ScrollUtils.shared.getLaunchpadActivity(withRunningApplication: targetRunningApplication) {
+            enableSmooth = false
+        }
         
-       // Y轴
-       if scrollEvent.Y.valid {
-           // 是否翻转滚动
-           if enableReverseY {
-               ScrollEvent.reverseY(scrollEvent)
-           }
-           // 是否平滑滚动
-           if enableSmooth {
-               // 禁止返回原始事件
-               returnOriginalEvent = false
-               // 如果输入值为非 Fixed 类型, 则使用 Step 作为门限值将数据归一化
-               if !scrollEvent.Y.fixed {
-                   ScrollEvent.normalizeY(scrollEvent, step)
-               }
-           }
-       }
+        // 是否返回原始事件 (不启用平滑时)
+        // 平滑滚动时禁止返回原始事件
+        var returnOriginalEvent = !(enableSmooth && (scrollEvent.X.valid || scrollEvent.Y.valid))
         
-       // X轴
-       if scrollEvent.X.valid {
-           // 是否翻转滚动
-           if enableReverseX {
-               ScrollEvent.reverseX(scrollEvent)
-           }
-           // 是否平滑滚动
-           if enableSmooth {
-               // 禁止返回原始事件
-               returnOriginalEvent = false
-               // 如果输入值为非 Fixed 类型, 则使用 Step 作为门限值将数据归一化
-               if !scrollEvent.X.fixed {
-                   ScrollEvent.normalizeX(scrollEvent, step)
-               }
-           }
-       }
+        // Y轴
+        if scrollEvent.Y.valid {
+            // 是否翻转滚动
+            if enableReverseY {
+                ScrollEvent.reverseY(scrollEvent)
+            }
+            
+            // 是否平滑滚动
+            if enableSmooth {
+                // 如果输入值为非 Fixed 类型, 则使用 Step 作为门限值将数据归一化
+                if !scrollEvent.Y.fixed {
+                    ScrollEvent.normalizeY(scrollEvent, step)
+                }
+            }
+        }
         
-       // 触发滚动事件推送
-       if enableSmooth {
-           ScrollPoster.shared.update(
-               event: event,
-               proxy: proxy,
-               duration: duration,
-               y: scrollEvent.Y.usableValue,
-               x: scrollEvent.X.usableValue,
-               speed: speed,
-               amplification: ScrollCore.shared.dashAmplification
-           ).enable()
-       }
-       // 返回事件对象
-       if returnOriginalEvent {
-           return Unmanaged.passUnretained(event)
-       } else {
-           return nil
-       }
+        // X轴
+        if scrollEvent.X.valid {
+            // 是否翻转滚动
+            if enableReverseX {
+                ScrollEvent.reverseX(scrollEvent)
+            }
+            
+            // 是否平滑滚动
+            if enableSmooth {
+                // 如果输入值为非 Fixed 类型, 则使用 Step 作为门限值将数据归一化
+                if !scrollEvent.X.fixed {
+                    ScrollEvent.normalizeX(scrollEvent, step)
+                }
+            }
+        }
+        
+        // 触发滚动事件推送
+        if enableSmooth {
+            ScrollPoster.shared.update(
+                event: event,
+                proxy: proxy,
+                duration: duration,
+                y: scrollEvent.Y.usableValue,
+                x: scrollEvent.X.usableValue,
+                speed: speed,
+                amplification: ScrollCore.shared.dashAmplification
+            ).enable()
+        }
+        
+        // 返回事件对象
+        if returnOriginalEvent {
+            return Unmanaged.passUnretained(event)
+        } else {
+            return nil
+        }
     }
     
-    func startHandlingScroll() {        
+    func startHandlingScroll() {
         // Guard
         if isActive { return }
         isActive = true
@@ -125,7 +126,7 @@ class ScrollCore {
             placeAt: .tailAppendEventTap,
             for: .defaultTap
         )
-      
+        
         // 初始化滚动事件发送器
         ScrollPoster.shared.create()
     }
